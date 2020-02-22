@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Y1
+name: Build K2P
 
 on: 
   release:
@@ -15,9 +15,9 @@ on:
     branches: 
       - master
     paths:
-      - 'Y1.config'
+      - 'K2P.config'
   schedule:
-    - cron: 0 9 * * *
+    - cron: 0 20 * * *
 #  watch:
 #    types: [started]
 
@@ -60,7 +60,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: 'Y1.config'
+        CONFIG_FILE: 'K2P.config'
         DIY_SH: 'diy.sh'
       run: |
         [ -e files ] && mv files openwrt/files
